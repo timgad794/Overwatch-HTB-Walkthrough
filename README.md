@@ -136,6 +136,8 @@ cd C:\Users\sqlmgmt\Desktop
 type user.txt
 
 User Flag: ------------------
+
+
 🐛 Privilege Escalation – WCF/SOAP Command Injection
 Step 1: Forward Internal WCF Service (Port 8000)
 
@@ -205,6 +207,8 @@ responder	Credential capture
 evil-winrm	WinRM shell
 chisel	Tunneling
 python3 (requests)	SOAP exploit
+
+
 🧠 Key Takeaways
 
     Always perform full port scans – 6520 (MSSQL) was missed initially
