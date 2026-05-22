@@ -27,7 +27,27 @@ Overwatch is a Medium Windows Domain Controller machine that requires exploiting
 
 ## 🔍 Enumeration
 
-### Nmap Scan
+### Nmap Scansmbclient -L //<TARGET_IP> -N
+smbclient //<TARGET_IP>/software$ -N
+cd Monitoring
+ls
+get overwatch.exe
+get overwatch.exe.config
+get overwatch.pdb
+exit
 
 ```bash
 nmap -sS -sV -p- <TARGET_IP> -oN full_scan.txt
+
+
+Open Ports (key services):
+
+    53 (DNS), 88 (Kerberos), 135 (msrpc), 139/445 (SMB)
+
+    389/636 (LDAP), 3389 (RDP), 5985 (WinRM)
+
+    6520 (Microsoft SQL Server) – non-standard port
+
+    8000 (HTTP) – WCF service (internal)
+
+SMB Enumeration
